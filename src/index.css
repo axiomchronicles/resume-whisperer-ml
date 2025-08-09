@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for Resume Analyzer with NextUI */
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer components {
+  /* Card Animations */
+  .card-hover {
+    transition: all 0.3s ease-out;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  .card-lift {
+    transition: all 0.2s ease-out;
+  }
+  
+  .card-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+
+  /* Custom button styles for hero section */
+  .btn-hero {
+    background: linear-gradient(135deg, #16a085, #1dd4aa);
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btn-hero:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgb(22 160 133 / 0.4);
+  }
+
+  /* Upload zone styles */
+  .upload-zone {
+    border: 2px dashed #cbd5e1;
+    background-color: #f8fafc;
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    transition: all 0.3s ease-out;
+  }
+  
+  .upload-zone:hover {
+    border-color: #16a085;
+    background-color: #f0fdfa;
+  }
+
+  .upload-zone.dragover {
+    border-color: #16a085;
+    background-color: #e6fffa;
+    transform: scale(1.02);
+  }
+
+  /* Score animations */
+  .score-ring {
+    transition: all 1s ease-out;
+  }
+
+  /* Gradient backgrounds */
+  .gradient-bg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, #16a085, #1dd4aa);
+  }
+
+  .gradient-success {
+    background: linear-gradient(135deg, #22c55e, #4ade80);
+  }
+
+  .gradient-warning {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  }
+
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.6s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+
+  /* Delay utilities for staggered animations */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+}
